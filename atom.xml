@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-04-11T01:03:48.066Z</updated>
+  <updated>2020-04-12T01:24:53.363Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>【Java】蓝桥杯：算法训练 比较字符串【原创】</title>
+    <link href="http://yoursite.com/2020/04/12/%E3%80%90Java%E3%80%91%E8%93%9D%E6%A1%A5%E6%9D%AF%EF%BC%9A%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83%20%E6%AF%94%E8%BE%83%E5%AD%97%E7%AC%A6%E4%B8%B2/"/>
+    <id>http://yoursite.com/2020/04/12/%E3%80%90Java%E3%80%91%E8%93%9D%E6%A1%A5%E6%9D%AF%EF%BC%9A%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83%20%E6%AF%94%E8%BE%83%E5%AD%97%E7%AC%A6%E4%B8%B2/</id>
+    <published>2020-04-12T01:16:13.291Z</published>
+    <updated>2020-04-12T01:24:53.363Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>　　编程实现两个字符串s1和s2的字典序比较。（保证每一个字符串不是另一个的前缀，且长度在100以内）。若s1和s2相等，输出0；若它们不相等，则指出其第一个不同字符的ASCII码的差值：如果s1&gt;s2，则差值为正；如果s1&lt;s2，则差值为负。</p><hr><h2 id="样例输入"><a href="#样例输入" class="headerlink" title="样例输入"></a>样例输入</h2><p>java basic</p><hr><h2 id="样例输出"><a href="#样例输出" class="headerlink" title="样例输出"></a>样例输出</h2><p>8</p><hr><h2 id="提交代码"><a href="#提交代码" class="headerlink" title="提交代码"></a>提交代码</h2><hr><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.Scanner;</span><br><span class="line"></span><br><span class="line"><span class="comment">// split("\\s+")：</span></span><br><span class="line"><span class="comment">// 1、\\s表示   空格,回车,换行等空白符； </span></span><br><span class="line"><span class="comment">// 2、+号表示一个或多个的意思；</span></span><br><span class="line"><span class="comment">//CompareTo方法：(变量1).compareTo((变量2))，返回的值是变量1比变量2的字典顺序。</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line"><span class="comment">// TODO Auto-generated method stub</span></span><br><span class="line">Scanner sc = <span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">String str = in.nextLine();</span><br><span class="line">String info[] = str.split(<span class="string">"\\s+"</span>);</span><br><span class="line">System.out.println(info[<span class="number">0</span>].compareTo(info[<span class="number">1</span>]));</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;问题描述&quot;&gt;&lt;a href=&quot;#问题描述&quot; class=&quot;headerlink&quot; title=&quot;问题描述&quot;&gt;&lt;/a&gt;问题描述&lt;/h2&gt;&lt;p&gt;　　编程实现两个字符串s1和s2的字典序比较。（保证每一个字符串不是另一个的前缀，且长度在100以内）。若s1和s2相等，输
+      
+    
+    </summary>
+    
+    
+    
+      <category term="Java" scheme="http://yoursite.com/tags/Java/"/>
+    
+      <category term="蓝桥杯" scheme="http://yoursite.com/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF/"/>
+    
+      <category term="算法" scheme="http://yoursite.com/tags/%E7%AE%97%E6%B3%95/"/>
+    
+  </entry>
   
   <entry>
     <title>ASP.NET+三层架构+Echarts绘制图表【原创】</title>
