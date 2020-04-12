@@ -6,7 +6,7 @@
   <link href="/lucasbase.github.io/atom.xml" rel="self"/>
   
   <link href="https://lucasbase.github.io/"/>
-  <updated>2020-04-12T01:24:53.363Z</updated>
+  <updated>2020-04-12T12:33:35.169Z</updated>
   <id>https://lucasbase.github.io/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>常见错误：hexo + github pages搭建博客，本地server成功，部署到github上之后样式加载不出来【转载】</title>
+    <link href="https://lucasbase.github.io/2020/04/12/%E5%B8%B8%E8%A7%81%E9%94%99%E8%AF%AF%EF%BC%9Ahexo%20+%20github%20pages%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%EF%BC%8C%E6%9C%AC%E5%9C%B0server%E6%88%90%E5%8A%9F%EF%BC%8C%E9%83%A8%E7%BD%B2%E5%88%B0github%E4%B8%8A%E4%B9%8B%E5%90%8E%E6%A0%B7%E5%BC%8F%E5%8A%A0%E8%BD%BD%E4%B8%8D%E5%87%BA%E6%9D%A5.html"/>
+    <id>https://lucasbase.github.io/2020/04/12/%E5%B8%B8%E8%A7%81%E9%94%99%E8%AF%AF%EF%BC%9Ahexo%20+%20github%20pages%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%EF%BC%8C%E6%9C%AC%E5%9C%B0server%E6%88%90%E5%8A%9F%EF%BC%8C%E9%83%A8%E7%BD%B2%E5%88%B0github%E4%B8%8A%E4%B9%8B%E5%90%8E%E6%A0%B7%E5%BC%8F%E5%8A%A0%E8%BD%BD%E4%B8%8D%E5%87%BA%E6%9D%A5.html</id>
+    <published>2020-04-12T12:32:24.367Z</published>
+    <updated>2020-04-12T12:33:35.169Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="搭建hexo博客时样式总是报404加载不出来"><a href="#搭建hexo博客时样式总是报404加载不出来" class="headerlink" title="搭建hexo博客时样式总是报404加载不出来"></a>搭建hexo博客时样式总是报404加载不出来</h2><p>对于如何搭建hexo博客网上有很多关于使用hexo + github pages搭建个人博客的博客，按照博客内容也都可以搭建起来。运行后在==本地服务器都可以实现访问==，但是==通过域名访问时却能够访问页面但是不能加载CSS样式文件和Jquery文件。==</p><h2 id="在本地server成功，显示没有问题"><a href="#在本地server成功，显示没有问题" class="headerlink" title="在本地server成功，显示没有问题"></a>在本地server成功，显示没有问题</h2><p><img src="https://img-blog.csdnimg.cn/2020041219584625.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDE0NjI5NA==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p><h2 id="但是在Git上部署至github上之后，就无法显示主题、图片和基本样式了"><a href="#但是在Git上部署至github上之后，就无法显示主题、图片和基本样式了" class="headerlink" title="但是在Git上部署至github上之后，就无法显示主题、图片和基本样式了"></a>但是在Git上部署至github上之后，就无法显示主题、图片和基本样式了</h2><p><img src="https://img-blog.csdnimg.cn/2020041220012147.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDE0NjI5NA==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p><h2 id="通过控制台查看样式文件报404，是因为url地址不对。"><a href="#通过控制台查看样式文件报404，是因为url地址不对。" class="headerlink" title="通过控制台查看样式文件报404，是因为url地址不对。"></a>通过控制台查看样式文件报404，是因为url地址不对。</h2><p>需要修改根目录_config.yml文件中的url地址和根目录</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># URL</span><br><span class="line">## If your site is put in a subdirectory, set url as &#39;http:&#x2F;&#x2F;yoursite.com&#x2F;child&#39; and root as &#39;&#x2F;child&#x2F;&#39;</span><br><span class="line">url: https:&#x2F;&#x2F;lucasbase.github.io&#x2F;</span><br><span class="line">root: &#x2F;lucasbase.github.io</span><br><span class="line">permalink: :year&#x2F;:month&#x2F;:day&#x2F;:title.html</span><br><span class="line">permalink_defaults:</span><br></pre></td></tr></table></figure><p>开始确认是这里的问题却不清楚 <strong>url</strong> 和 <strong>root</strong> 分别该是什么？</p><p>这里的 ==url== 是GitHub pages给我们分配的网址！</p><p><img src="https://img-blog.csdnimg.cn/20200412200823108.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDE0NjI5NA==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p><p>这里的 ==root== 是我们搭建该博客的仓库名！</p><p><img src="https://img-blog.csdnimg.cn/20200412200907532.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDE0NjI5NA==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p><h2 id="最后重新部署上传就可以了"><a href="#最后重新部署上传就可以了" class="headerlink" title="最后重新部署上传就可以了"></a>最后重新部署上传就可以了</h2><p><strong>hexo clean<br>hexo g<br>hexo d</strong></p><p>本文转载至：<a href="https://blog.csdn.net/banjw_129/article/details/82261165" target="_blank" rel="noopener">https://blog.csdn.net/banjw_129/article/details/82261165</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;搭建hexo博客时样式总是报404加载不出来&quot;&gt;&lt;a href=&quot;#搭建hexo博客时样式总是报404加载不出来&quot; class=&quot;headerlink&quot; title=&quot;搭建hexo博客时样式总是报404加载不出来&quot;&gt;&lt;/a&gt;搭建hexo博客时样式总是报404加载不
+      
+    
+    </summary>
+    
+    
+    
+      <category term="hexo" scheme="https://lucasbase.github.io/tags/hexo/"/>
+    
+      <category term="github" scheme="https://lucasbase.github.io/tags/github/"/>
+    
+  </entry>
   
   <entry>
     <title>【Java】蓝桥杯：算法训练 比较字符串【原创】</title>
